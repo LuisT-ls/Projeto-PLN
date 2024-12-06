@@ -48,13 +48,13 @@ pip install googletrans==4.0.0-rc1 langdetect textblob pyperclip
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd tradutor-multilingue-avancado
+   cd Projeto-PLN
    ```
 
 3. Execute o script principal:
 
    ```bash
-   python tradutor.py
+   python translator_gui.py
    ```
 
 4. Interaja com a interface gráfica para:
@@ -66,7 +66,7 @@ pip install googletrans==4.0.0-rc1 langdetect textblob pyperclip
 ## Estrutura do Projeto
 
 ```
-tradutor-multilingue/
+Projeto-PLN/
 │
 ├── translator_gui.py                 # Código principal da aplicação
 ├── translation_history.json    # Arquivo de histórico de traduções (gerado automaticamente)

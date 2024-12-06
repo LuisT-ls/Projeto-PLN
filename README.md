@@ -68,7 +68,7 @@ pip install googletrans==4.0.0-rc1 langdetect textblob pyperclip
 ```
 Projeto-PLN/
 │
-├── translator_gui.py                 # Código principal da aplicação
+├── translator_gui.py           # Código principal da aplicação
 ├── translation_history.json    # Arquivo de histórico de traduções (gerado automaticamente)
 └── README.md                   # Documentação do projeto
 ```

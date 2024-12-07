@@ -55,17 +55,6 @@ class AdvancedTranslator:
     def get_language_choices(self):
         return [f"{code} ({name})" for code, name in self.supported_languages.items()]
     
-    def text_analysis(self, text):
-        try:
-            blob = textblob.TextBlob(text)
-            return {
-                'word_count': len(blob.words),
-                'sentiment': blob.sentiment.polarity,
-                'subjectivity': blob.sentiment.subjectivity
-            }
-        except Exception as e:
-            return {"error": str(e)}
-    
     def load_history(self):
         try:
             if os.path.exists(self.history_file):

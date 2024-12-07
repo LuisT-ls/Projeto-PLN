@@ -163,7 +163,6 @@ class TranslatorApp:
         ttk.Button(action_frame, text="Traduzir", command=self.translate_text, **button_style).pack(side=tk.LEFT, padx=5)
         ttk.Button(action_frame, text="Copiar", command=self.copy_translation, **button_style).pack(side=tk.LEFT, padx=5)
         ttk.Button(action_frame, text="Importar Arquivo", command=self.import_file, **button_style).pack(side=tk.LEFT, padx=5)
-        ttk.Button(action_frame, text="Análise de Texto", command=self.show_text_analysis, **button_style).pack(side=tk.LEFT, padx=5)
         
         # Frame de resultado
         result_frame = ttk.LabelFrame(main_frame, text="Texto Traduzido")
@@ -280,38 +279,6 @@ class TranslatorApp:
                 json.dump([], f)
             self.update_history_list()
             messagebox.showinfo("Sucesso", "Histórico de traduções limpo.")
-    
-    def show_text_analysis(self):
-        text = self.input_text.get("1.0", tk.END).strip()
-        if not text:
-            messagebox.showwarning("Aviso", "Por favor, insira um texto para análise.")
-            return
-        
-        try:
-            analysis = self.translator.text_analysis(text)
-            
-            details = (
-                f"Análise de Texto:\n"
-                f"Número de Palavras: {analysis['word_count']}\n"
-                f"Sentimento (Polaridade): {analysis['sentiment']:.2f}\n"
-                f"Subjetividade: {analysis['subjectivity']:.2f}\n\n"
-                "Interpretação:\n"
-                "- Sentimento: -1 (Muito Negativo) a 1 (Muito Positivo)\n"
-                "- Subjetividade: 0 (Objetivo) a 1 (Subjetivo)"
-            )
-            
-            # Criar janela de análise
-            analysis_window = tk.Toplevel(self.root)
-            analysis_window.title("Análise de Texto")
-            analysis_window.geometry("400x300")
-            
-            analysis_text = tk.Text(analysis_window, wrap=tk.WORD)
-            analysis_text.insert(tk.END, details)
-            analysis_text.config(state='disabled')
-            analysis_text.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
-        
-        except Exception as e:
-            messagebox.showerror("Erro", str(e))
 
 def main():
     root = tk.Tk()

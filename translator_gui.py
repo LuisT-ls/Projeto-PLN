@@ -7,7 +7,6 @@ import pyperclip
 import json
 from datetime import datetime
 import webbrowser
-import textblob
 
 class AdvancedTranslator:
     def __init__(self, history_file='translation_history.json'):

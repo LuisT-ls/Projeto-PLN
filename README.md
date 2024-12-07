@@ -12,7 +12,6 @@ O **Tradutor Multilíngue** é uma aplicação desktop em Python com interface g
 
 - **Tradução Automática**: Tradução de textos em tempo real para vários idiomas.
 - **Detecção Automática de Idioma**: Identifica o idioma do texto automaticamente.
-- **Análise de Texto**: Realiza análise de sentimentos (polaridade) e subjetividade.
 - **Histórico de Traduções**: Armazena as últimas 100 traduções realizadas.
 - **Importação e Tradução de Arquivos**: Traduza arquivos `.txt` e salve os resultados.
 - **Interface Intuitiva**: Interface amigável criada com `Tkinter`.
@@ -24,7 +23,6 @@ O **Tradutor Multilíngue** é uma aplicação desktop em Python com interface g
 - **Tkinter**: Interface gráfica.
 - **googletrans**: API de tradução do Google.
 - **langdetect**: Detecção de idiomas.
-- **TextBlob**: Análise de sentimento e subjetividade.
 - **pyperclip**: Manipulação da área de transferência.
 - **JSON**: Armazenamento de histórico.
 - **Datetime**: Registro de data e hora.
